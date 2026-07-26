@@ -1,128 +1,457 @@
+/* ==========================
+   XIAO BAO RESTAURANT
+========================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#111;
+
+    background:#0b0b0b;
+
     color:#fff;
+
+    font-family:Poppins,sans-serif;
+
 }
 
+/* NAVBAR */
+
+.navbar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 60px;
+
+background:rgba(0,0,0,.75);
+
+backdrop-filter:blur(12px);
+
+z-index:999;
+
+}
+
+.logo .cn{
+
+font-size:38px;
+
+font-family:Cinzel,serif;
+
+color:#d4af37;
+
+font-weight:bold;
+
+}
+
+.logo .en{
+
+font-size:14px;
+
+letter-spacing:5px;
+
+color:#fff;
+
+}
+
+.navbar ul{
+
+display:flex;
+
+list-style:none;
+
+gap:35px;
+
+}
+
+.navbar a{
+
+text-decoration:none;
+
+color:white;
+
+font-size:15px;
+
+transition:.3s;
+
+}
+
+.navbar a:hover{
+
+color:#d4af37;
+
+}
+
+/* HERO */
+
 .hero{
-    background:linear-gradient(135deg,#000,#222);
-    text-align:center;
-    padding:80px 20px;
+
+height:100vh;
+
+background:url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+}
+
+.hero-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:rgba(0,0,0,.65);
+
+}
+
+.hero-content{
+
+position:relative;
+
+text-align:center;
+
+z-index:2;
+
 }
 
 .hero h1{
-    font-size:70px;
-    color:#FFD700;
+
+font-size:90px;
+
+font-family:Cinzel,serif;
+
+color:#d4af37;
+
 }
 
 .hero h2{
-    font-size:35px;
-    margin:10px 0;
+
+font-size:30px;
+
+letter-spacing:8px;
+
+margin-top:10px;
+
 }
 
 .hero p{
-    margin:10px 0;
-    color:#ddd;
-    font-size:20px;
+
+margin-top:15px;
+
+font-size:20px;
+
+color:#ddd;
+
 }
 
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    background:#FFD700;
-    color:#000;
-    padding:15px 35px;
-    border-radius:40px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
+.line{
+
+width:140px;
+
+height:2px;
+
+background:#d4af37;
+
+margin:30px auto;
+
 }
 
-.btn:hover{
-    background:#fff;
+.gold-btn{
+
+display:inline-block;
+
+margin-top:40px;
+
+padding:18px 50px;
+
+background:#d4af37;
+
+color:#000;
+
+font-weight:bold;
+
+text-decoration:none;
+
+border-radius:40px;
+
+transition:.35s;
+
 }
 
-.contact{
-    text-align:center;
-    padding:40px 20px;
-    background:#1c1c1c;
+.gold-btn:hover{
+
+transform:scale(1.05);
+
+background:#fff;
+
 }
 
-.contact p{
-    margin:12px 0;
-    font-size:18px;
+/* ABOUT */
+
+.about{
+
+padding:100px 15%;
+
+text-align:center;
+
 }
 
-.contact a{
-    color:#FFD700;
-    text-decoration:none;
+.about h2{
+
+font-size:42px;
+
+color:#d4af37;
+
+margin-bottom:25px;
+
 }
+
+.about p{
+
+line-height:2;
+
+font-size:18px;
+
+color:#ddd;
+
+}
+
+/* MENU */
 
 #menu{
-    max-width:1200px;
-    margin:auto;
-    padding:50px 20px;
+
+padding:90px 10%;
+
 }
 
-#menu h2{
-    text-align:center;
-    color:#FFD700;
-    font-size:40px;
-    margin-bottom:30px;
+.title{
+
+text-align:center;
+
+font-size:42px;
+
+color:#d4af37;
+
+margin-bottom:40px;
+
 }
 
 #search{
-    width:100%;
-    padding:15px;
-    border:none;
-    border-radius:10px;
-    font-size:18px;
-    margin-bottom:30px;
+
+width:100%;
+
+padding:18px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:18px;
+
+margin-bottom:40px;
+
 }
 
+/* CARD */
+
 #menu-list{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
-    gap:20px;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
 }
 
 .card{
-    background:#222;
-    border-radius:15px;
-    padding:20px;
-    transition:.3s;
+
+background:#181818;
+
+border-radius:20px;
+
+padding:25px;
+
+transition:.35s;
+
+border:1px solid rgba(212,175,55,.15);
+
 }
 
 .card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 0 20px rgba(255,215,0,.3);
+
+transform:translateY(-10px);
+
+box-shadow:0 15px 40px rgba(212,175,55,.25);
+
 }
 
 .card h3{
-    color:#FFD700;
-    margin-bottom:10px;
+
+color:#d4af37;
+
+margin-bottom:12px;
+
+font-size:22px;
+
 }
 
 .price{
-    color:#fff;
-    font-size:22px;
-    margin-top:10px;
+
+font-size:28px;
+
+margin:20px 0;
+
+font-weight:bold;
+
 }
 
 .order{
-    display:block;
-    margin-top:15px;
-    text-align:center;
-    background:#FFD700;
-    color:#000;
-    padding:10px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
+
+display:block;
+
+text-align:center;
+
+padding:14px;
+
+background:#d4af37;
+
+color:#000;
+
+font-weight:bold;
+
+border-radius:12px;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.order:hover{
+
+background:#fff;
+
+}
+
+/* CONTACT */
+
+#contact{
+
+padding:90px 15%;
+
+text-align:center;
+
+background:#111;
+
+}
+
+#contact h2{
+
+font-size:42px;
+
+color:#d4af37;
+
+margin-bottom:25px;
+
+}
+
+#contact p{
+
+margin:15px 0;
+
+font-size:18px;
+
+}
+
+#contact a{
+
+color:#d4af37;
+
+text-decoration:none;
+
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.navbar{
+
+padding:15px 20px;
+
+flex-direction:column;
+
+}
+
+.navbar ul{
+
+margin-top:15px;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero h1{
+
+font-size:58px;
+
+}
+
+.hero h2{
+
+font-size:22px;
+
+letter-spacing:4px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.about,
+
+#menu,
+
+#contact{
+
+padding:70px 25px;
+
+}
+
 }
