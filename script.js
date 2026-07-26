@@ -81,6 +81,35 @@ menuList.innerHTML +=`
 
 <div class="card">
 
+<img
+class="food-image"
+src="https://picsum.photos/400/300?random=${Math.floor(Math.random()*1000)}">
+
+<div class="category">
+${food.category}
+</div>
+
+<h3>${food.name}</h3>
+
+<div class="price">
+${food.price}
+</div>
+
+<a
+class="order"
+target="_blank"
+href="https://t.me/xiaobao1996">
+
+Đặt qua Telegram
+
+</a>
+
+</div>
+
+`;
+
+<div class="card">
+
 <h3>${food.name}</h3>
 
 <p>${food.category}</p>
