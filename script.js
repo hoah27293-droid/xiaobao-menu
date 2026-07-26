@@ -1,4 +1,6 @@
-// Dữ liệu thực đơn Cơm & Món Nhậu (Đã cập nhật theo danh sách của bạn)
+// ==========================================
+// 1. DỮ LIỆU THỰC ĐƠN (MENU DATA)
+// ==========================================
 const menuData = [
     // === CƠM SUẤT & CƠM RANG ===
     { id: 1, name: "Cơm Ba Chỉ Cháy Cạnh", price: 40000, category: "com" },
@@ -20,24 +22,30 @@ const menuData = [
     { id: 15, name: "Bún / Phở Xào Mềm", price: 55000, category: "nhau" },
     { id: 16, name: "Lẩu Thái Hải Sản / Lẩu Riêu Bò", price: 250000, category: "nhau" },
 
-    // === MÓN ĂN KÈM & BÌNH DÂN ===
+    // === MÓN ĂN KÈM ===
     { id: 17, name: "Nem Rán Giòn Rụm (Dĩa)", price: 50000, category: "kem" },
     { id: 18, name: "Chả Lá Lốt Thơm Lừng", price: 50000, category: "kem" },
     { id: 19, name: "Trứng Lộn (Quả)", price: 8000, category: "kem" },
     { id: 20, name: "Bánh Mì / Xôi Nóng", price: 15000, category: "kem" },
     { id: 21, name: "Cháo Đêm Cháo Sườn / Cháo Gà", price: 35000, category: "kem" },
 
-    // === ĐỒ UỐNG & NƯỚC ÉP ===
+    // === ĐỒ UỐNG ===
     { id: 22, name: "Bia Tiger / Heineken (Lon)", price: 22000, category: "douong" },
     { id: 23, name: "Nước Ép Trái Cây Tươi", price: 30000, category: "douong" },
     { id: 24, name: "Nước Ngọt (Coke/Pepsi/7Up)", price: 15000, category: "douong" }
 ];
 
+// Biến lưu trữ giỏ hàng
 let cart = [];
 
-// Hiển thị thực đơn
+// ==========================================
+// 2. CÁC HÀM XỬ LÝ GIAO DIỆN & CHỨC NĂNG
+// ==========================================
+
+// Hiển thị thực đơn ra giao diện
 function renderMenu(items) {
     const grid = document.getElementById("menu-grid");
+    if (!grid) return;
     grid.innerHTML = "";
 
     items.forEach(item => {
@@ -45,18 +53,22 @@ function renderMenu(items) {
         card.className = "menu-card";
         card.innerHTML = `
             <h3>${item.name}</h3>
-            <div class="price">${item.price.toLocaleString()} VNĐ</div>
+            <div class="price">${item.price.toLocaleString('vi-VN')} VNĐ</div>
             <button class="add-btn" onclick="addToCart(${item.id})">+ Thêm món</button>
         `;
         grid.appendChild(card);
     });
 }
 
-// Lọc món theo danh mục
-function filterMenu(category) {
+// Lọc món ăn theo danh mục
+function filterMenu(category, element) {
+    // Đổi màu nút active
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-    if (event) event.target.classList.add('active');
+    if (element) {
+        element.classList.add('active');
+    }
 
+    // Lọc danh sách
     if (category === 'all') {
         renderMenu(menuData);
     } else {
@@ -65,7 +77,7 @@ function filterMenu(category) {
     }
 }
 
-// Thêm món vào giỏ
+// Thêm món vào giỏ hàng
 function addToCart(id) {
     const item = menuData.find(m => m.id === id);
     const cartItem = cart.find(c => c.id === id);
@@ -79,10 +91,11 @@ function addToCart(id) {
     updateCartUI();
 }
 
-// Cập nhật giao diện giỏ hàng
+// Cập nhật giỏ hàng trên màn hình
 function updateCartUI() {
     const cartList = document.getElementById("cart-items");
     const totalSpan = document.getElementById("total-price");
+    if (!cartList || !totalSpan) return;
 
     if (cart.length === 0) {
         cartList.innerHTML = `<li class="empty-cart">Chưa có món nào được chọn</li>`;
@@ -99,12 +112,12 @@ function updateCartUI() {
         li.className = "cart-item";
         li.innerHTML = `
             <span>${item.name} (x${item.quantity})</span>
-            <strong>${(item.price * item.quantity).toLocaleString()} đ</strong>
+            <strong>${(item.price * item.quantity).toLocaleString('vi-VN')} đ</strong>
         `;
         cartList.appendChild(li);
     });
 
-    totalSpan.innerText = total.toLocaleString() + " VNĐ";
+    totalSpan.innerText = total.toLocaleString('vi-VN') + " VNĐ";
 }
 
 // Đặt hàng
@@ -118,5 +131,9 @@ function checkout() {
     updateCartUI();
 }
 
-// Khởi chạy ban đầu
-renderMenu(menuData);
+// ==========================================
+// 3. TỰ ĐỘNG CHẠY KHI TRANG LẠI XONG
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+    renderMenu(menuData);
+});
