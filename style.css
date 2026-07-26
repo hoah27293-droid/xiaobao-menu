@@ -1,26 +1,129 @@
+*{
+box-sizing:border-box;
+}
+
+
 body{
+
+margin:0;
+
+font-family:Arial, sans-serif;
 
 background:#111;
 
 color:white;
 
-font-family:Arial;
-
-padding:20px;
-
 }
 
 
-h1{
+
+/* TRANG CHỦ */
+
+.hero{
+
+height:500px;
+
+background:
+
+linear-gradient(
+rgba(0,0,0,.6),
+rgba(0,0,0,.6)
+),
+
+url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
 
 text-align:center;
 
+}
+
+
+
+.hero h1{
+
+font-size:55px;
+
 color:#d4af37;
+
+letter-spacing:5px;
 
 }
 
 
-.item{
+
+.hero p{
+
+font-size:22px;
+
+}
+
+
+
+button{
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:30px;
+
+background:#d4af37;
+
+font-size:18px;
+
+}
+
+
+
+/* GIỚI THIỆU */
+
+
+.about{
+
+padding:40px;
+
+text-align:center;
+
+}
+
+
+
+.about h2,
+.menu h2{
+
+color:#d4af37;
+
+font-size:35px;
+
+}
+
+
+
+/* MENU */
+
+
+.menu{
+
+padding:30px;
+
+max-width:1000px;
+
+margin:auto;
+
+}
+
+
+
+.food{
 
 background:#222;
 
@@ -39,26 +142,41 @@ align-items:center;
 }
 
 
-.item h2{
+
+.food h3{
 
 margin:0;
+
+font-size:22px;
 
 }
 
 
-.item p{
+
+.food p{
 
 color:#aaa;
 
 }
 
 
-.item span{
+
+.food strong{
 
 color:#d4af37;
 
 font-size:22px;
 
-font-weight:bold;
+}
+
+
+
+footer{
+
+text-align:center;
+
+padding:30px;
+
+color:#888;
 
 }
