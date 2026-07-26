@@ -1,37 +1,30 @@
 [
-  {
-    "category": "Cơm",
-    "name": "Cơm ba chỉ cháy cạnh",
-    "price": "260"
-  },
-  {
-    "category": "Cơm",
-    "name": "Cơm chả lá lốt",
-    "price": "260"
-  },
-  {
-    "category": "Cơm",
-    "name": "Cơm thịt kho trứng",
-    "price": "260"
-  },
-  {
-    "category": "Cơm",
-    "name": "Cơm cá kho",
-    "price": "260"
-  },
-  {
-    "category": "Cơm",
-    "name": "Cơm gà rang gừng",
-    "price": "260"
-  },
-  {
-    "category": "Cơm",
-    "name": "Cơm gà chiên mắm",
-    "price": "260"
-  },
-  {
-    "category": "Cơm",
-    "name": "Cơm gà xối mỡ",
-    "price": "260"
-  }
+{
+"category":"🍚 Cơm",
+"name":"Cơm ba chỉ cháy cạnh",
+"price":"260 ₱",
+"image":"images/com.jpg"
+},
+
+{
+"category":"🍚 Cơm",
+"name":"Cơm gà xối mỡ",
+"price":"260 ₱",
+"image":"images/gac.jpg"
+},
+
+{
+"category":"🍜 Mỳ xào",
+"name":"Mỳ xào bò",
+"price":"300 ₱",
+"image":"images/my.jpg"
+},
+
+{
+"category":"🥤 Nước uống",
+"name":"Nước cam vắt",
+"price":"190 ₱",
+"image":"images/cam.jpg"
+}
+
 ]
