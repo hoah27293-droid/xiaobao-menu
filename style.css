@@ -1,235 +1,64 @@
-*{
-
-box-sizing:border-box;
-
-}
-
-
-
 body{
 
-margin:0;
-
-background:#080808;
+background:#111;
 
 color:white;
 
-font-family:
-Arial, sans-serif;
+font-family:Arial;
+
+padding:20px;
 
 }
-
-
-
-.hero{
-
-text-align:center;
-
-padding:70px 20px;
-
-background:
-linear-gradient(
-rgba(0,0,0,.7),
-rgba(0,0,0,.9)
-),
-url("images/banner.jpg");
-
-background-size:cover;
-
-}
-
-
-
-.logo{
-
-font-size:90px;
-
-color:#d4af37;
-
-font-family:serif;
-
-}
-
 
 
 h1{
 
-font-size:45px;
-
-letter-spacing:8px;
-
-color:#d4af37;
-
-}
-
-
-
-.ship{
-
-margin:20px;
-
-font-size:20px;
-
-}
-
-
-
-.telegram{
-
-display:inline-block;
-
-padding:15px 35px;
-
-border:
-
-1px solid #d4af37;
-
-color:#d4af37;
-
-text-decoration:none;
-
-border-radius:30px;
-
-}
-
-
-
-.search-box{
-
-padding:20px;
-
 text-align:center;
 
-}
-
-
-
-input{
-
-width:90%;
-
-max-width:500px;
-
-padding:15px;
-
-border-radius:30px;
-
-border:none;
-
-font-size:16px;
-
-}
-
-
-
-#menu-list{
-
-display:grid;
-
-grid-template-columns:
-
-repeat(auto-fit,minmax(280px,1fr));
-
-gap:20px;
-
-padding:20px;
-
-}
-
-
-
-.card{
-
-background:#111;
-
-border-radius:20px;
-
-overflow:hidden;
-
-border:1px solid #222;
-
-transition:.3s;
-
-}
-
-
-
-.card:hover{
-
-border-color:#d4af37;
-
-}
-
-
-
-.food-image{
-
-width:100%;
-
-height:220px;
-
-object-fit:cover;
-
-}
-
-
-
-.content{
-
-padding:20px;
-
-}
-
-
-
-.category{
-
 color:#d4af37;
 
 }
 
 
+.item{
 
-.price{
+background:#222;
+
+margin:15px 0;
+
+padding:20px;
+
+border-radius:15px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+
+.item h2{
+
+margin:0;
+
+}
+
+
+.item p{
+
+color:#aaa;
+
+}
+
+
+.item span{
 
 color:#d4af37;
 
 font-size:22px;
 
 font-weight:bold;
-
-margin:15px 0;
-
-}
-
-
-
-.order{
-
-display:block;
-
-background:#d4af37;
-
-color:black;
-
-padding:12px;
-
-text-align:center;
-
-border-radius:20px;
-
-text-decoration:none;
-
-}
-
-
-
-footer{
-
-text-align:center;
-
-padding:40px;
-
-color:#d4af37;
 
 }
