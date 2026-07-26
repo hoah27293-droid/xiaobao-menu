@@ -4,10 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>小宝 XIAO BAO</title>
+<title>Menu Nhà Hàng</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -17,91 +16,49 @@
 <body>
 
 
-<header class="hero">
+<h1>🍽 MENU NHÀ HÀNG</h1>
 
 
-<div class="logo">
-小宝
-</div>
-
-
-<h1>
-XIAO BAO
-</h1>
-
-
-<h3>
-Cơm • Đồ Nhậu
-</h3>
-
-
-<p>
-米饭和下酒菜
-</p>
-
-
-<div class="ship">
-🚚 SHIP NHANH PHILIPPIN
-</div>
-
-
-<p>
-📍 Manila
-</p>
-
-
-<a class="telegram"
-href="https://t.me/xiaobao1996"
-target="_blank">
-
-ĐẶT MÓN TELEGRAM
-
-</a>
-
-
-</header>
+<div id="menu"></div>
 
 
 
-<div class="search-box">
+<script src="menu.js"></script>
 
-<input 
-id="search"
-placeholder="🔍 Tìm món ăn...">
+
+<script>
+
+let box = document.getElementById("menu");
+
+
+menu.forEach(item => {
+
+box.innerHTML += `
+
+<div class="item">
+
+<div>
+
+<h2>${item.name}</h2>
+
+<p>${item.category}</p>
 
 </div>
 
 
-
-<main id="menu-list">
-
-
-</main>
+<span>
+${item.price}
+</span>
 
 
+</div>
 
-<footer>
+`;
 
-<h2>
-小宝 XIAO BAO
-</h2>
-
-
-<p>
-☎ Telegram: @xiaobao1996
-</p>
+});
 
 
-<p>
-Nhận đặt tiệc - Nấu ăn theo yêu cầu
-</p>
-
-
-</footer>
-
-
-
-<script src="script.js"></script>
+</script>
 
 
 </body>
