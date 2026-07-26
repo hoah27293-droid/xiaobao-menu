@@ -1,248 +1,29 @@
 [
-{
-"category":"🍚 Cơm",
-"name":"Cơm ba chỉ cháy cạnh",
-"price":"260 ₱",
-"image":"images/com.jpg"
-},
+  { "id": 1, "name": "Cơm Ba Chỉ Cháy Cạnh", "price": 40000, "category": "com" },
+  { "id": 2, "name": "Cơm Sườn Xào Chua Ngọt", "price": 45000, "category": "com" },
+  { "id": 3, "name": "Cơm Gà Chiên Mắm / Gà Luộc", "price": 45000, "category": "com" },
+  { "id": 4, "name": "Cơm Tấm Sườn Bì Chả", "price": 50000, "category": "com" },
+  { "id": 5, "name": "Cơm Cá Kho / Thịt Kho Trứng", "price": 40000, "category": "com" },
+  { "id": 6, "name": "Cơm Rang Dưa Bò", "price": 45000, "category": "com" },
+  { "id": 7, "name": "Cơm Rang Hải Sản Xào", "price": 50000, "category": "com" },
+  { "id": 8, "name": "Canh Khoai Tây Hầm Xương (Thêm)", "price": 25000, "category": "com" },
+  { "id": 9, "name": "Canh Sườn Chua (Thêm)", "price": 25000, "category": "com" },
 
-{
-"category":"🍚 Cơm",
-"name":"Cơm chả lá lốt",
-"price":"260 ₱",
-"image":"images/com.jpg"
-},
+  { "id": 10, "name": "Ngan Cháy Tỏi", "price": 180000, "category": "nhau" },
+  { "id": 11, "name": "Gà Ủ Muối Nguyên Con / Nửa Con", "price": 150000, "category": "nhau" },
+  { "id": 12, "name": "Vịt Quay Tươi Ngon", "price": 160000, "category": "nhau" },
+  { "id": 13, "name": "Gà / Ngan / Vịt Rang Muối", "price": 160000, "category": "nhau" },
+  { "id": 14, "name": "Mì Xào Bò / Mì Xào Hải Sản", "price": 60000, "category": "nhau" },
+  { "id": 15, "name": "Bún / Phở Xào Mềm", "price": 55000, "category": "nhau" },
+  { "id": 16, "name": "Lẩu Thái Hải Sản / Lẩu Riêu Bò", "price": 250000, "category": "nhau" },
 
-{
-"category":"🍚 Cơm",
-"name":"Cơm thịt kho trứng",
-"price":"260 ₱",
-"image":"images/com.jpg"
-},
+  { "id": 17, "name": "Nem Rán Giòn Rụm (Dĩa)", "price": 50000, "category": "kem" },
+  { "id": 18, "name": "Chả Lá Lốt Thơm Lừng", "price": 50000, "category": "kem" },
+  { "id": 19, "name": "Trứng Lộn (Quả)", "price": 8000, "category": "kem" },
+  { "id": 20, "name": "Bánh Mì / Xôi Nóng", "price": 15000, "category": "kem" },
+  { "id": 21, "name": "Cháo Đêm Cháo Sườn / Cháo Gà", "price": 35000, "category": "kem" },
 
-{
-"category":"🍚 Cơm",
-"name":"Cơm cá kho",
-"price":"260 ₱",
-"image":"images/com.jpg"
-},
-
-{
-"category":"🍚 Cơm",
-"name":"Cơm gà rang gừng",
-"price":"260 ₱",
-"image":"images/com.jpg"
-},
-
-{
-"category":"🍚 Cơm",
-"name":"Cơm gà chiên mắm",
-"price":"260 ₱",
-"image":"images/com.jpg"
-},
-
-{
-"category":"🍚 Cơm",
-"name":"Cơm gà xối mỡ",
-"price":"260 ₱",
-"image":"images/com.jpg"
-},
-
-{
-"category":"🍚 Cơm",
-"name":"Cơm sườn xào chua ngọt",
-"price":"260 ₱",
-"image":"images/com.jpg"
-},
-
-{
-"category":"🍚 Cơm",
-"name":"Cơm lòng xào dưa",
-"price":"260 ₱",
-"image":"images/com.jpg"
-},
-
-{
-"category":"🍚 Cơm",
-"name":"Cơm bò xào dưa",
-"price":"260 ₱",
-"image":"images/com.jpg"
-},
-
-{
-"category":"🍚 Cơm",
-"name":"Cơm mực xào",
-"price":"260 ₱",
-"image":"images/com.jpg"
-},
-
-{
-"category":"🍚 Cơm",
-"name":"Cơm thịt băm",
-"price":"260 ₱",
-"image":"images/com.jpg"
-},
-
-{
-"category":"🍚 Cơm",
-"name":"Cơm tôm rim chua ngọt",
-"price":"260 ₱",
-"image":"images/com.jpg"
-},
-
-{
-"category":"🍚 Cơm đặc biệt",
-"name":"Cơm rang dưa bò",
-"price":"280 ₱",
-"image":"images/com.jpg"
-},
-
-{
-"category":"🍚 Cơm đặc biệt",
-"name":"Cơm rang thập cẩm",
-"price":"280 ₱",
-"image":"images/com.jpg"
-},
-
-{
-"category":"🍚 Cơm đặc biệt",
-"name":"Cơm gà Phan Rang",
-"price":"300 ₱",
-"image":"images/com.jpg"
-},
-
-{
-"category":"🍚 Cơm đặc biệt",
-"name":"Cơm gà Phan Rang đặc biệt",
-"price":"350 ₱",
-"image":"images/com.jpg"
-},
-
-
-{
-"category":"🍜 Mỳ xào",
-"name":"Mỳ xào bò",
-"price":"300 ₱",
-"image":"images/my.jpg"
-},
-
-{
-"category":"🍜 Mỳ xào",
-"name":"Mỳ xào bò mẹt lớn",
-"price":"1000 ₱",
-"image":"images/my.jpg"
-},
-
-{
-"category":"🍜 Mỳ xào",
-"name":"Mỳ xào hải sản",
-"price":"300 ₱",
-"image":"images/my.jpg"
-},
-
-{
-"category":"🍜 Mỳ xào",
-"name":"Mỳ xào hải sản mẹt lớn",
-"price":"1000 ₱",
-"image":"images/my.jpg"
-},
-
-{
-"category":"🍜 Mỳ xào",
-"name":"Mỳ xào gà",
-"price":"300 ₱",
-"image":"images/my.jpg"
-},
-
-{
-"category":"🍜 Mỳ xào",
-"name":"Mỳ xào gà mẹt lớn",
-"price":"1000 ₱",
-"image":"images/my.jpg"
-},
-
-
-{
-"category":"🍜 Bún + Phở",
-"name":"Bún gà",
-"price":"280 - 320 ₱",
-"image":"images/bun.jpg"
-},
-
-{
-"category":"🍜 Bún + Phở",
-"name":"Bún bò",
-"price":"280 - 320 ₱",
-"image":"images/bun.jpg"
-},
-
-{
-"category":"🍜 Bún + Phở",
-"name":"Bún cá",
-"price":"300 - 350 ₱",
-"image":"images/bun.jpg"
-},
-
-{
-"category":"🍜 Bún + Phở",
-"name":"Bún Thái hải sản",
-"price":"300 - 350 ₱",
-"image":"images/bun.jpg"
-},
-
-{
-"category":"🍜 Bún + Phở",
-"name":"Bún lòng",
-"price":"250 ₱",
-"image":"images/bun.jpg"
-},
-
-{
-"category":"🍜 Bún + Phở",
-"name":"Bún sốt vang",
-"price":"300 ₱",
-"image":"images/bun.jpg"
-},
-
-{
-"category":"🍜 Bún + Phở",
-"name":"Bún riêu",
-"price":"280 ₱",
-"image":"images/bun.jpg"
-},
-
-{
-"category":"🍜 Bún + Phở",
-"name":"Bún kê tim trứng non",
-"price":"280 ₱",
-"image":"images/bun.jpg"
-},
-
-{
-"category":"🍜 Bún + Phở",
-"name":"Bún thịt ba chỉ quay",
-"price":"300 ₱",
-"image":"images/bun.jpg"
-},
-
-{
-"category":"🍜 Bún + Phở",
-"name":"Bún vịt quay",
-"price":"300 ₱",
-"image":"images/bun.jpg"
-},
-
-{
-"category":"🍜 Bún + Phở",
-"name":"Bún đậu mắm tôm",
-"price":"300 ₱",
-"image":"images/bun.jpg"
-},
-
-{
-"category":"🍜 Bún + Phở",
-"name":"Bún nem lụi",
-"price":"350 ₱",
-"image":"images/bun.jpg"
-}
+  { "id": 22, "name": "Bia Tiger / Heineken (Lon)", "price": 22000, "category": "douong" },
+  { "id": 23, "name": "Nước Ép Trái Cây Tươi", "price": 30000, "category": "douong" },
+  { "id": 24, "name": "Nước Ngọt (Coke/Pepsi/7Up)", "price": 15000, "category": "douong" }
 ]
