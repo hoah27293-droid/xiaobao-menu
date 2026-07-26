@@ -1,82 +1,64 @@
-const menuList =
-document.getElementById("menu-list");
+const menu = [
 
+{
+name:"Cơm ba chỉ cháy cạnh",
+price:"260"
+},
 
-const search =
-document.getElementById("search");
+{
+name:"Cơm chả lá lốt",
+price:"260"
+},
 
+{
+name:"Cơm thịt kho trứng",
+price:"260"
+},
 
+{
+name:"Cơm cá kho",
+price:"260"
+},
 
-let menu=[];
+{
+name:"Cơm gà rang gừng",
+price:"260"
+},
 
+{
+name:"Cơm gà chiên mắm",
+price:"260"
+},
 
+{
+name:"Cơm gà xối mỡ",
+price:"260"
+},
 
-fetch("menu.json")
+{
+name:"Cơm sườn xào chua ngọt",
+price:"260"
+}
 
-.then(res=>res.json())
+];
 
-.then(data=>{
+const menuList=document.getElementById("menu-list");
 
-menu=data;
-
-render(menu);
-
-});
-
-
-
-
-function render(data){
-
+function showMenu(data){
 
 menuList.innerHTML="";
 
+data.forEach(item=>{
 
-data.forEach(food=>{
-
-
-menuList.innerHTML += `
-
+menuList.innerHTML+=`
 
 <div class="card">
 
+<h3>${item.name}</h3>
 
-<img 
-class="food-image"
-src="${food.image}">
+<p class="price">${item.price} ₱</p>
 
-
-
-<div class="content">
-
-
-<div class="category">
-
-${food.category}
-
-</div>
-
-
-
-<h3>
-
-${food.name}
-
-</h3>
-
-
-
-<div class="price">
-
-${food.price}
-
-</div>
-
-
-
-<a 
-
-class="order"
+<a class="order"
 
 href="https://t.me/xiaobao1996"
 
@@ -86,47 +68,26 @@ target="_blank">
 
 </a>
 
-
 </div>
-
-
-</div>
-
-
 
 `;
 
-
 });
-
 
 }
 
+showMenu(menu);
 
+document.getElementById("search").addEventListener("input",function(){
 
+const keyword=this.value.toLowerCase();
 
-search.addEventListener(
-"keyup",
-()=>{
+const result=menu.filter(item=>
 
-
-let key =
-search.value.toLowerCase();
-
-
-
-let result =
-menu.filter(item=>
-
-item.name
-.toLowerCase()
-.includes(key)
+item.name.toLowerCase().includes(keyword)
 
 );
 
-
-
-render(result);
-
+showMenu(result);
 
 });
