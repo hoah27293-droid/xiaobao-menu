@@ -1,70 +1,99 @@
 const menu = [
 
 {
+category:"🍚 Cơm",
 name:"Cơm ba chỉ cháy cạnh",
-price:"260"
+price:"260 ₱"
 },
 
 {
+category:"🍚 Cơm",
 name:"Cơm chả lá lốt",
-price:"260"
+price:"260 ₱"
 },
 
 {
+category:"🍚 Cơm",
 name:"Cơm thịt kho trứng",
-price:"260"
+price:"260 ₱"
 },
 
 {
+category:"🍚 Cơm",
 name:"Cơm cá kho",
-price:"260"
+price:"260 ₱"
 },
 
 {
+category:"🍚 Cơm",
 name:"Cơm gà rang gừng",
-price:"260"
+price:"260 ₱"
 },
 
 {
+category:"🍚 Cơm",
 name:"Cơm gà chiên mắm",
-price:"260"
+price:"260 ₱"
 },
 
 {
+category:"🍚 Cơm",
 name:"Cơm gà xối mỡ",
-price:"260"
+price:"260 ₱"
 },
 
 {
+category:"🍚 Cơm",
 name:"Cơm sườn xào chua ngọt",
-price:"260"
+price:"260 ₱"
+},
+
+{
+category:"🍜 Mỳ",
+name:"Mỳ xào bò",
+price:"300 ₱"
+},
+
+{
+category:"🍜 Mỳ",
+name:"Mỳ xào hải sản",
+price:"300 ₱"
+},
+
+{
+category:"🍜 Mỳ",
+name:"Mỳ xào gà",
+price:"300 ₱"
 }
 
 ];
 
-const menuList=document.getElementById("menu-list");
+const menuList = document.getElementById("menu-list");
+const search = document.getElementById("search");
 
-function showMenu(data){
+function render(data){
 
 menuList.innerHTML="";
 
-data.forEach(item=>{
+data.forEach(food=>{
 
-menuList.innerHTML+=`
+menuList.innerHTML +=`
 
 <div class="card">
 
-<h3>${item.name}</h3>
+<h3>${food.name}</h3>
 
-<p class="price">${item.price} ₱</p>
+<p>${food.category}</p>
+
+<div class="price">${food.price}</div>
 
 <a class="order"
 
-href="https://t.me/xiaobao1996"
+target="_blank"
 
-target="_blank">
+href="https://t.me/xiaobao1996">
 
-Đặt món
+Đặt qua Telegram
 
 </a>
 
@@ -76,18 +105,18 @@ target="_blank">
 
 }
 
-showMenu(menu);
+render(menu);
 
-document.getElementById("search").addEventListener("input",function(){
+search.addEventListener("keyup",()=>{
 
-const keyword=this.value.toLowerCase();
+const key=search.value.toLowerCase();
 
 const result=menu.filter(item=>
 
-item.name.toLowerCase().includes(keyword)
+item.name.toLowerCase().includes(key)
 
 );
 
-showMenu(result);
+render(result);
 
 });
